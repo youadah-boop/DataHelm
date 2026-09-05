@@ -6,7 +6,7 @@
 
 Scientists, engineers, and analysts often need to explore, clean, and visualize tabular data (experiment results, sensor logs, survey exports...) without writing pandas code by hand, and without uploading that data to a third-party cloud service. DataHelm is built around one core idea: **the LLM only ever sees metadata and small previews of your data** — column names, types, row counts, a short preview of the active sheet — never the full dataset. It uses that information to write Python code, which the application then reviews and runs locally, entirely offline as far as your data is concerned.
 
-A typical use case: a researcher has a set of CSV files from lab measurements open in several sheet windows. They ask, "merge the calibration and the raw-readings sheets on timestamp, apply the calibration offset, and plot the corrected signal." DataHelm's LLM backend writes the pandas/matplotlib code for that, the application checks it, the user confirms if needed, and the result appears in a new sheet and a new chart window — without the underlying measurements ever being transmitted anywhere except as small structural summaries.
+A typical use case: a researcher has a set of Excel files from lab measurements open in several sheet windows. They ask, "merge the calibration and the raw-readings sheets on timestamp, apply the calibration offset, and plot the corrected signal." DataHelm's LLM backend writes the pandas/matplotlib code for that, the application checks it, the user confirms if needed, and the result appears in a new sheet and a new chart window — without the underlying measurements ever being transmitted anywhere except as small structural summaries.
 
 ## How it works
 
